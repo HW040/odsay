@@ -1,18 +1,26 @@
 constant:
   swagger-const:
     title: Odsay
-    description: Server To Server Communication
+    description: Sever To Server Communication
     version: v0.1
-odsay-api-conts:
-  base-url: https://api.odsay.com/v1/api
-  param-apk-key: apiKey
-  param-api-key-value: GxXDL514Ds52H/04R8HPPo+2TZlcR7sQrmNnwb8+Sxw
-  param-start-lqt-name: SY
-  param-start-lng-name: SX
-  param-end-lat-name: EY
-  param-end-lng-name: EX
+  odsay-api-const:
+    base-url: https://api.odsay.com/v1/api
+    search-pub-trans-path-url: /searchPubTransPathT
+    param-api-key-name: apiKey
+    param-api-key-value: GxXDL514Ds52H/04R8HPPo+2TZlcR7sQrmNnwb8+Sxw
+    param-start-lat-name: SY
+    param-start-lng-name: SX
+    param-end-lat-name: EY
+    param-end-lng-name: EX
+
 
 spring:
+  application:
+    name: GreenGramVer2
+  datasource:
+    url: jdbc:mariadb://localhost/greenggram_ver3
+    username: root
+    password: green502
   jackson:
     deserialization:
       fail-on-unknown-properties: false #open api에서 받은 json/xml에서 받고 싶지 않은 프로퍼티는 클래스를 만들 때 생략할 수 있게 해줌.
